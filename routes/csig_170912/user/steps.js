@@ -18,7 +18,7 @@ module.exports = {
         next: '/track'
     },
     '/need-csig': {
-        next: '/csig-requirements'
+        next: '/give-csig-details'
     },
     '/csig-requirements': {
         fields: ['contact-csig'],
@@ -27,7 +27,7 @@ module.exports = {
     '/give-csig-details': {
       fields: ['csig-email', 'csig-name'],
       backLink: 'need-csig',
-        next: '/email-confirmation'
+        next: '/tracking-waiting'
     },
     '/tracking-waiting': {
         next: '/track'
