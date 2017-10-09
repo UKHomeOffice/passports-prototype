@@ -102,5 +102,8 @@ module.exports = {
     },
     '/confirmation':{
         next: '/title'
+    },
+    '/confirmation-next':{
+        next: '/title'
     }
 };

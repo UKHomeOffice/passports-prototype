@@ -22,7 +22,7 @@ module.exports = {
     },
     '/csig-requirements': {
         backLink: 'need-csig',
-        // fields: ['contact-csig'],
+        entryPoint: true,
         next: '/give-csig-details'
     },
     '/give-csig-details': {
