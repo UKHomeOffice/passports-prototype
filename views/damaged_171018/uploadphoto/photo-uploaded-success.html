@@ -7,7 +7,20 @@
 {{/header}}
 
 {{$content}}
-
+<style>
+.photo-upload {
+  overflow: hidden;
+  width: 150px;
+  height: 187px;
+}
+.photo-upload img {
+  max-width: inherit;
+  width: 410px;
+  position: relative;
+  left: -135px;
+  top: -110px;
+}
+</style>
         <div class="panel-indent panel-photo-result panel-photo-pass">
             <h2>Photo passed first check</h2>
             <p>Your photo has been automatically checked for common mistakes.</p>
@@ -30,9 +43,7 @@
     <div class="sidebar related">
       <div class="photo-preview-inner">
           <h2 class="heading-medium">Your photo</h2>
-          <div class="photo">
-              <img src="../../public/images/thumbnail.jpeg" alt="Your uploaded photo" title="Your uploaded photo" width="150">
-          </div>
+          <div class="photo-upload"></div>
       </div>
 
     </div>
