@@ -38,6 +38,20 @@
     }
 }
 
+/* photo upload styles */
+.photo-upload {
+  overflow: hidden;
+  width: 150px;
+  height: 187px;
+}
+.photo-upload img {
+  max-width: inherit;
+  width: 410px;
+  position: relative;
+  left: -135px;
+  top: -110px;
+}
+
 .button-guide-next a{
     background-image:url("../images/icon-arrow-right.svg")!important;
     background-repeat: no-repeat;

@@ -8,9 +8,11 @@ var formFocus = require('hmpo-frontend-toolkit').formFocus,
     anchorButton = require('hmpo-frontend-toolkit').anchorButton,
     closeWindow = require('hmpo-frontend-toolkit').close,
     typeahead = require('./modules/typeahead'),
+    loadPhoto = require('./modules/loadphoto'),
     fillBanner = require('./modules/fill-banner');
 
 helpers.documentReady(fillBanner);
+helpers.documentReady(loadPhoto);
 helpers.documentReady(formFocus);
 helpers.documentReady(reveal);
 helpers.documentReady(validation);
