@@ -47,6 +47,26 @@ module.exports = {
       }
     ]
   },
+'apply-self': {
+  legend: {
+    value: 'Are you applying for your own passport?',
+    className: 'visuallyhidden'
+  },
+  options: [
+    { value: true, label: 'Yes' },
+    { value: false, label: 'No', toggle: 'apply-self' }
+  ],
+  formatter: ['boolean'],
+  validate: [
+    'required',
+    {
+      type:'equal',
+      arguments:[true], /* if the arguments are NOT selected */
+      redirect:'https://passportapplication.service.gov.uk/ips-olc/'
+    }
+  ],
+  className: 'inline'
+},
 'apply-uk': {
   legend: {
     value: 'Are you applying from the UK?',
