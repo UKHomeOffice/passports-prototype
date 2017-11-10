@@ -2,22 +2,16 @@
 
 {{$propositionHeader}}{{/propositionHeader}}
 
-{{$pageTitle}}Are you applying for your own passport?{{/pageTitle}}
+{{$pageTitle}}Are you applying from the UK?{{/pageTitle}}
 
 {{$header}}
-    <h1>Are you applying for your own passport?</h1>
+    <h1>Are you applying from the UK?</h1>
 {{/header}}
 
 {{$content}}
 {{< hmpo-partials-form}}
     {{$form}}
-        {{#radio-group}}apply-self{{/radio-group}}
-        <div id="apply-self" class="js-hidden" style="margin-bottom: 25px">
-            <div class="panel panel-border-narrow">
-                <p>If you're applying for a child passport or for someone unable to make their own decisions, you need to <a href="">use a different service</a>.</p>
-            </div>
-
-        </div>
+        {{#radio-group}}apply-uk{{/radio-group}}
         {{#input-submit}}{{/input-submit}}
     {{/form}}
 {{/ hmpo-partials-form}}

@@ -1,13 +1,8 @@
 module.exports = {
-    '/':{
-      fields: ['apply-self'],
-      backLink: './../startpage',
-      next: '/apply-uk',
-    },
-    '/apply-uk': {
+    '/': {
       fields: ['apply-uk', 'application-country'],
       controller: require('../../../controllers/go-overseas'),
-      backLink: './',
+      backLink: './../startpage',
       next: '/first-uk', /* if Yes is selected */
       nextAlt: 'what-do-you-want-to-do-overseas', /* if they are from Germany/France */
       nextAltAlt:'what-do-you-want-to-do-overseas',/* if they are from Afganistan */
@@ -15,6 +10,7 @@ module.exports = {
       nextAltAltAltAlt:'../overseas-not-available' /* if they are from Syria - not available */
     },
     '/first-uk': {
+        backLink: './',
         fields: ['passport-before'],
         next: '/lost-stolen'
     },
@@ -52,6 +48,10 @@ module.exports = {
       fields: ['16-or-older'],
       controller: require('../../../controllers/go-overseas'),
       backLink: './lost-stolen',
+      next: '/apply-self'
+    },
+    '/apply-self':{
+      fields: ['apply-self'],
       next: '/../filter', /* if they are from the UK */
-    }
+    },
 };
