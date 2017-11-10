@@ -1,5 +1,8 @@
 module.exports = {
     '/': {
-        next: '/../filter'
+      next: 'before-you-continue'
+    },
+    '/before-you-continue':{
+      next: '/../filter'
     }
 };

@@ -1,7 +1,7 @@
 module.exports = {
     '/': {
         backLink: '/../prototype_171127/filter/uncancelled',
-        next: '/what-you-need'
+        next: '/you-need-a-photo'
     },
     '/before-you-continue-overseas': {
         backLink: '/../prototype_171127/overseas/give-contact-details',

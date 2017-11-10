@@ -16,6 +16,10 @@ module.exports = {
     },
     '/lost-stolen': {
         fields: ['lost-stolen'],
+        next: '/name-changed'
+    },
+    '/name-changed': {
+        fields: ['name-changed'],
         next: '/dob'
     },
     '/what-do-you-want-to-do': {
@@ -47,11 +51,7 @@ module.exports = {
     '/dob': {
       fields: ['16-or-older'],
       controller: require('../../../controllers/go-overseas'),
-      backLink: './lost-stolen',
-      next: '/apply-self'
-    },
-    '/apply-self':{
-      fields: ['apply-self'],
+      backLink: './name-changed',
       next: '/../filter', /* if they are from the UK */
     },
 };
