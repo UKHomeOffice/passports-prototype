@@ -502,6 +502,7 @@ app.use('/how-to', require('./routes/how-to'));
 //Gov.uk pages
 app.use('/govuk', require('./routes/govuk'));
 app.use('/govuk/damaged', require('./routes/govuk/damaged'));
+app.use('/govuk/print', require('./routes/govuk/print'));
 
 //Tracking
 app.use('/tracking', require('./routes/tracking'));
