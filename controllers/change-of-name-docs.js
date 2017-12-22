@@ -14,15 +14,15 @@ Controller.prototype.get = function successHandler(req, res, callback) {
 	} else {
 	switch (req.sessionModel.get('change-of-name-reason')) {
 		case 'Marriage-or-civil-partnership':
-			return res.redirect('./name-change-docs-for-marriage')
+			return res.redirect('./name-change-docs#marriage')
 		case 'Divorce':
-			return res.redirect('./name-change-docs-for-divorce')
+			return res.redirect('./name-change-docs#divorce')
 		case 'Small':
-			return res.redirect('./name-change-docs-for-small-changes')
+			return res.redirect('./name-change-docs#first-name')
 		case 'Gender-reassigment':
-			return res.redirect('./name-change-docs-for-gender-change')
+			return res.redirect('./name-change-docs#gender')
 		case 'I-changed-my-name-another-way':
-			return res.redirect('./name-change-docs-for-other-changes')
+			return res.redirect('./name-change-docs#other')
 	}
 	}
 }
