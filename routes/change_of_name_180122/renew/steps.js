@@ -112,6 +112,9 @@ module.exports = {
     '/required-documents':{
         controller: require('../../../controllers/change-of-name-docs')
     },
+    '/name-change-docs':{
+        next: '/declaration'
+    },
     '/name-change-docs-for-marriage':{
         next: '/declaration'
     },
