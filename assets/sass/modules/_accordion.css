@@ -44,6 +44,7 @@
 .accordion.with-js h2 {
   margin-top: 0;
   margin-bottom: 0;
+  width: 90%;
 }
 
 .accordion.with-js .accordion-section-header {
@@ -62,21 +63,16 @@
 }
 
 .accordion.with-js .icon {
-
   position: absolute;
   top: 50%;
   right: 15px;
-
   height: 16px;
   width: 16px;
   margin-top: -8px;
-
   /* PNG fallback for SVG */
   background-image: url('/public/images/icon-plus-minus.png');
-
   /* SVG sprite */
   background: url("/public/images/icon-plus-minus.svg"), linear-gradient(transparent, transparent);
-
   background-repeat: no-repeat;
   background-position: 0 -16px;
 }
