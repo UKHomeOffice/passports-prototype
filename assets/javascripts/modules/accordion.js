@@ -152,7 +152,7 @@ AccordionSection.prototype.setExpanded = function(expanded) {
 
 }
 
-new Accordion(document.getElementById('my-accordion'))
+new Accordion(document.getElementById('name-change-accordion'))
 
 window.onhashchange = function() {
   window.location.reload()
