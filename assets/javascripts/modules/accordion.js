@@ -117,20 +117,7 @@ AccordionSection.prototype.setup = function() {
   icon.setAttribute('class', 'icon')
 
   header.appendChild(icon)
-
-  if (window.location.hash) {
-    var hash = window.location.hash.substr(1)
-    var openSection = document.getElementById(hash)
-    if (openSection) {
-      openSection.setAttribute('aria-expanded', 'true')
-      var parent = openSection.parentNode
-      parent.insertBefore(openSection, parent.firstChild)
-      setTimeout(function() {
-        window.scrollTo(0, 0)
-      }, 1)
-    }
-  } 
-
+  this.getHash()
 }
 
 AccordionSection.prototype.toggleExpanded = function(){
@@ -138,6 +125,18 @@ AccordionSection.prototype.toggleExpanded = function(){
 
   this.setExpanded(!expanded)
   this.accordion.updateOpenAll()
+}
+
+AccordionSection.prototype.getHash = function() {
+  if (window.location.hash) {
+    var hash = window.location.hash.substr(1)
+    var openSection = document.getElementById(hash)
+    if (openSection) {
+      openSection.setAttribute('aria-expanded', 'true')
+      var parent = openSection.parentNode
+      parent.insertBefore(openSection, parent.firstChild)
+    }
+  }
 }
 
 AccordionSection.prototype.expanded = function() {
@@ -154,3 +153,10 @@ AccordionSection.prototype.setExpanded = function(expanded) {
 }
 
 new Accordion(document.getElementById('my-accordion'))
+
+window.onhashchange = function() {
+  window.location.reload()
+  setTimeout(function() {
+    window.scrollTo(0, 0)
+  }, 1)
+}
