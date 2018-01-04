@@ -122,7 +122,6 @@ AccordionSection.prototype.setup = function() {
 
 AccordionSection.prototype.toggleExpanded = function(){
   var expanded = (this.element.getAttribute('aria-expanded') == 'true')
-
   this.setExpanded(!expanded)
   this.accordion.updateOpenAll()
 }
@@ -139,17 +138,40 @@ AccordionSection.prototype.getHash = function() {
   }
 }
 
+AccordionSection.prototype.getHashHideOthers = function() {
+
+  if (window.location.hash) {
+    var hideAccordionSections = document.getElementsByClassName("accordion-section")
+      for(var i = 0; i < hideAccordionSections.length; i++){
+        hideAccordionSections[i].classList.add('hidden')
+      }
+    var hash = window.location.hash.substr(1)
+    var openSection = document.getElementById(hash)
+    if (openSection) {
+      openSection.classList.remove('hidden')
+      openSection.setAttribute('aria-expanded', 'true')
+    }
+  }
+}
+
+AccordionSection.prototype.hideOthers = function() {
+  var hideAccordionSections = document.getElementsByClassName("accordion-section")
+    for(var i = 0; i < hideAccordionSections.length; i++){
+      hideAccordionSections[i].setAttribute('aria-expanded', 'false')
+    }
+}
+
+
 AccordionSection.prototype.expanded = function() {
   return (this.element.getAttribute('aria-expanded') == 'true')
 }
 
 AccordionSection.prototype.setExpanded = function(expanded) {
+  this.hideOthers()
   this.element.setAttribute('aria-expanded', expanded)
-
   // This is set to trigger reflow for IE8, which doesn't
   // always reflow after a setAttribute call.
   this.element.className = this.element.className
-
 }
 
 new Accordion(document.getElementById('name-change-accordion'))

@@ -3,7 +3,7 @@
 }
 
 .accordion-expand-all {
-  display: inline;
+  display: none;
   background: transparent;
   border-width: 0;
   font-size: 16px;
