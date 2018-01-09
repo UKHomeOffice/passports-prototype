@@ -32,10 +32,10 @@
    <li>a completed <a href="https://www.gov.uk/government/publications/passports-for-newly-weds-and-civil-partners">passports for newly weds and civil partners</a> form</li>
 </ul>
 
-
-<div class="panel panel-border-wide">
+<br>
+<!--<div class="panel panel-border-wide">
                     <p>If your documents aren't in English or Welsh you also need to get a <a href="https://www.gov.uk/certifying-a-document">certified translation.</a></p>
-                </div>
+                </div>-->
     {{#values.required-documents}}
       <a href="#" class="button">Print</a><br/><br/>
     {{/values.required-documents}}
@@ -44,7 +44,13 @@
     {{/values.required-documents}}
 {{/form}}
 {{/ hmpo-partials-form}}
+    <details>
+            <summary><span class="summary">My documents aren't in English or Welsh</span></summary>
+            <div class="panel panel-border-narrow">
+              <p>You'll need to get a <a href="https://www.gov.uk/certifying-a-document">certified translation.</a></p>
 
+            </div>
+        </details>
 
 {{/content}}
 
