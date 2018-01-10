@@ -48,18 +48,30 @@
 
 </ul>
 <br>
-<div class="panel panel-border-wide">
-    <p>If your documents aren't in English or Welsh you also need to get a <a href="https://www.gov.uk/certifying-a-document">certified translation.</a></p>
-</div>
 
-{{#values.required-documents}}
-  <a href="#" class="button">Print</a><br/><br/>
-{{/values.required-documents}}
-{{^values.required-documents}}
-  <a href="/change_of_name_180122/renew/declaration" class="button">Continue</a><br/><br/>
-{{/values.required-documents}}
+
+  {{#values.required-documents}}
+    <a href="../tracking-change-of-name/waiting-for-old-pass" class="button">Continue</a><br/><br/>
+  {{/values.required-documents}}
+  {{^values.required-documents}}
+    <a href="/change_of_name_180122/renew/declaration" class="button">Continue</a><br/><br/>
+  {{/values.required-documents}}
+
 {{/form}}
 {{/ hmpo-partials-form}}
+<details>
+            <summary><span class="summary">My documents aren't in English or Welsh</span></summary>
+            <div class="panel panel-border-narrow">
+              <p>You'll need to get a <a href="https://www.gov.uk/certifying-a-document">certified translation.</a></p>
+
+            </div>
+        </details>
+
+ <div class="app-c-print-link">
+  <a href="/" class="app-c-print-link__link" rel="alternate">
+    Print page
+  </a>
+</div>
 
 
 {{/content}}

@@ -19,7 +19,7 @@
   <div class="accordion-section" id="marriage">
 
     <div class="accordion-section-header">
-      <h2 class="heading-medium">Marriage or civil partnership</h2>
+      <h2 class="heading-small">Marriage or civil partnership</h2>
     </div>
     <div class="accordion-section-body">
       <h3>After the ceremony</h3>
@@ -42,7 +42,7 @@
   <div class="accordion-section" id="divorce">
 
     <div class="accordion-section-header">
-      <h2 class="heading-medium">Divorce</h2>
+      <h2 class="heading-small">Divorce</h2>
     </div>
     <div class="accordion-section-body">
       <h3>Send all of the following:</h3>
@@ -72,7 +72,7 @@
   <div class="accordion-section" id="gender">
 
     <div class="accordion-section-header">
-      <h2 class="heading-medium">Gender reassignment</h2>
+      <h2 class="heading-small">Gender reassignment</h2>
     </div>
     <div class="accordion-section-body">
       <h3>You need to send:</h3>
@@ -112,7 +112,7 @@
   <div class="accordion-section" id="first-name">
 
     <div class="accordion-section-header">
-      <h2 class="heading-medium">Changing the spelling or order of your first names, or dropping a first name</h2>
+      <h2 class="heading-small">Changing the spelling or order of your first names, or dropping a first name</h2>
     </div>
     <div class="accordion-section-body">
       <h3>You need to send:</h3>
@@ -136,7 +136,7 @@
   <div class="accordion-section" id="other">
 
     <div class="accordion-section-header">
-      <h2 class="heading-medium">Other name changes</h2>
+      <h2 class="heading-small">Other name changes</h2>
     </div>
     <div class="accordion-section-body">
       <h3>You need to send:</h3>
@@ -169,20 +169,31 @@
 </div>
 
 <br>
-<div class="panel panel-border-wide">
-  <p>If your documents aren't in English or Welsh you also need to get a <a href="https://www.gov.uk/certifying-a-document">certified translation.</a></p>
-</div>
 {{< hmpo-partials-form}}
 {{$form}}
 
-  {{#values.required-documents}}
-    <a href="#" class="button">Print</a><br/><br/>
+    {{#values.required-documents}}
+    <a href="../tracking-change-of-name/waiting-for-old-pass" class="button">Continue</a><br/><br/>
   {{/values.required-documents}}
   {{^values.required-documents}}
     <a href="/change_of_name_180122/renew/declaration" class="button">Continue</a><br/><br/>
   {{/values.required-documents}}
+
 {{/form}}
 {{/ hmpo-partials-form}}
+<details>
+            <summary><span class="summary">My documents aren't in English or Welsh</span></summary>
+            <div class="panel panel-border-narrow">
+              <p>You'll need to get a <a href="https://www.gov.uk/certifying-a-document">certified translation.</a></p>
+
+            </div>
+        </details>
+
+ <div class="app-c-print-link">
+  <a href="/" class="app-c-print-link__link" rel="alternate">
+    Print page
+  </a>
+</div>
 
 
 {{/content}}

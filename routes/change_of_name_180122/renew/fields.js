@@ -362,7 +362,7 @@ module.exports = {
       formatter: 'boolean',
       validate: 'required',
       legend: {
-          value: 'How would you like us to send your old passport back to you?',
+          value: '',
           className: 'form-label-bold'
       },
       options: [

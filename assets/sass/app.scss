@@ -1332,3 +1332,13 @@ padding: 10px;
   margin-bottom: 30px;
   padding: 20px 15px 15px;
 }
+
+.app-c-print-link {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.app-c-print-link .app-c-print-link__link {
+    background: url(https://assets.publishing.service.gov.uk/government-frontend/icon-print-b04bc2c….png) no-repeat 0 50%;
+    padding: 0.5em 0 0.5em 28px;
+}
