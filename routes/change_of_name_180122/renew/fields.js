@@ -351,7 +351,7 @@ module.exports = {
       className: 'visuallyhidden'
     },
     options: [
-      {value: 'Special-delivery', label: 'Special delivery (£3 extra)'},
+      {value: 'Special-delivery', label: 'Secure delivery (£3 extra)'},
       {value: 'Standard', label: 'Standard post (free)'}
     ],
     validate: [
@@ -366,7 +366,7 @@ module.exports = {
           className: 'form-label-bold'
       },
       options: [
-          { value: true, label: 'Special delivery (&#163;3 extra)' },
+          { value: true, label: 'Secure delivery (&#163;3 extra)' },
           { value: false, label: 'Standard post (free)' }
       ]
   },
