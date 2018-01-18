@@ -152,7 +152,9 @@ AccordionSection.prototype.setExpanded = function(expanded) {
 
 }
 
-new Accordion(document.getElementById('name-change-accordion'))
+if (/name-change-docs-for-other-changes/.test(window.location.pathname)) {
+  new Accordion(document.getElementById('name-change-accordion'))
+}
 
 window.onhashchange = function() {
   window.location.reload()
