@@ -127,6 +127,9 @@ module.exports = {
     '/name-change-docs-for-gender-change':{
         next: '/declaration'
     },
+    '/name-change-docs-for-other-changes':{
+        next: '/declaration'
+    },
     '/declaration':{
         prereqs: [ '/summary' ],
         next: '/payment'
