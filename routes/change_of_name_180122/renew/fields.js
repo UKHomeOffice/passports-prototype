@@ -147,7 +147,7 @@ module.exports = {
     options: [
       {value: 'Marriage-or-civil-partnership', label: 'Marriage or civil partnership'},
       {value: 'Divorce', label: 'Divorce'},
-      {value: 'Gender-reassigment', label: 'Gender reassignment'},
+      {value: 'Gender-reassigment', label: 'Gender transition'},
       {value: 'I-changed-my-name-another-way', label: 'I changed my name another way'}
     ],
     validate: [
