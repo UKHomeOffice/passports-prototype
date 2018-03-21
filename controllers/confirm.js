@@ -228,7 +228,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
       },
       {
         step: values.veteran ? null : this.getEditStep('secure-return'),
-        title: values.veteran ? 'Delivery' : 'Old passport',
+        title: values.veteran ? 'Delivery' : 'Old passport and extra documents',
         value: function() {
           if (values['secure-return']) {
             var output = 'You need to post your old passport to us. We’ll return it to you by ';
@@ -238,7 +238,7 @@ ConfirmForm.prototype.createBreakdown = function(req, values, callback) {
             }
             return output;
           } else {
-            return 'You need to post your old passport to us. We’ll return it to you by standard post. <br/>£0.00';
+            return ' We’ll return your old passport and extra documents by standard post. <br/>£0.00';
           }
         }
       },
